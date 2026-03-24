@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-// 🔧 UPDATE: Change these to your real project previews
 const FEATURED_PROJECTS = [
   {
     id: 1,
@@ -9,7 +8,7 @@ const FEATURED_PROJECTS = [
     description:
       "A Spring Boot application that schedules and delivers smart task reminders via email and push notifications. Built with PostgreSQL and Redis for persistence and caching.",
     tags: ["Spring Boot", "PostgreSQL", "Redis", "Docker"],
-    github: "https://github.com/yourusername/task-reminder",
+    github: "https://github.com/DakaraiMahisa/task-reminder",
     color: "indigo",
   },
   {
@@ -19,20 +18,18 @@ const FEATURED_PROJECTS = [
     description:
       "A CI/CD pipeline automation toolkit that provisions infrastructure, runs tests, and deploys Spring Boot microservices to AWS using GitHub Actions and Docker.",
     tags: ["Docker", "GitHub Actions", "AWS", "Spring Boot"],
-    github: "https://github.com/yourusername/devops-pilot",
+    github: "https://github.com/DakaraiMahisa/devops-pilot",
     color: "amber",
   },
 ];
 
-// 🔧 UPDATE: Change numbers to reflect your real experience
 const STATS = [
   { value: "2+", label: "Years Learning" },
   { value: "2+", label: "Projects Built" },
-  { value: "5+", label: "Technologies" },
+  { value: "3+", label: "Technologies" },
   { value: "100%", label: "Committed" },
 ];
 
-// Tech tags shown in hero
 const TECH_TAGS = [
   "Java",
   "Spring Boot",
@@ -49,8 +46,8 @@ export default function Home() {
       {/* ── HERO ──────────────────────────────────────── */}
       <section className="relative min-h-[92vh] flex items-center px-6 max-w-7xl mx-auto">
         {/* Background glow orbs */}
-        <div className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-indigo-500/15 blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 -left-20 w-[350px] h-[350px] bg-amber-500/10 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute -top-20 -right-20 w-125 h-125 bg-indigo-500/15 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 -left-20 w-87.5 h-87.5 bg-amber-500/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full relative z-10">
           {/* LEFT — Text content */}
@@ -68,7 +65,7 @@ export default function Home() {
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter mb-6">
               Dakarai
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-amber-500">
                 Mahisa.
               </span>
             </h1>
@@ -134,11 +131,6 @@ export default function Home() {
 
             {/* Photo frame */}
             <div className="relative z-10 w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl shadow-indigo-500/20 ring-4 ring-indigo-500/30">
-              {/*
-                🔧 UPDATE: Add your photo as public/dakarai.jpg
-                The src="/dakarai.jpg" will work because Vite serves
-                everything in /public at the root URL.
-              */}
               <img
                 src="/dakarai.jpg"
                 alt="Dakarai Mahisa"
@@ -162,12 +154,12 @@ export default function Home() {
             </div>
 
             {/* Floating card — college */}
-            <div className="absolute -top-4 -left-4 md:left-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl p-4 shadow-xl z-20 max-w-[160px]">
+            <div className="absolute -top-4 -left-4 md:left-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl p-4 shadow-xl z-20 max-w-40">
               <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-1">
                 Studying at
               </p>
               <p className="font-bold text-slate-700 dark:text-slate-200 text-xs leading-snug">
-                KPR Institute of Engineering
+                KPRIET
               </p>
             </div>
           </div>
@@ -175,7 +167,7 @@ export default function Home() {
 
         {/* Scroll hint */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-          <div className="w-px h-10 bg-gradient-to-b from-indigo-500 to-transparent" />
+          <div className="w-px h-10 bg-linear-to-b from-indigo-500 to-transparent" />
           <span className="text-[10px] uppercase tracking-[0.2em] text-slate-500">
             Scroll
           </span>
@@ -190,7 +182,7 @@ export default function Home() {
               key={label}
               className="bg-white dark:bg-slate-950 px-6 py-8 text-center"
             >
-              <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-amber-500 leading-none mb-2">
+              <p className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-amber-500 leading-none mb-2">
                 {value}
               </p>
               <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">
@@ -210,11 +202,11 @@ export default function Home() {
             </p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-[1.05] mb-6">
               Engineer by study.{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-amber-500">
                 Developer by passion.
               </span>
             </h2>
-            {/* 🔧 UPDATE: Edit these paragraphs to tell your real story */}
+            {/* 🔧 About me*/}
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
               I'm an ECE student who discovered a deep passion for software
               engineering — specifically the backend systems that make
@@ -305,7 +297,7 @@ export default function Home() {
               </p>
               <h2 className="text-4xl md:text-5xl font-black tracking-tighter">
                 Projects I've{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-amber-500">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-amber-500">
                   built.
                 </span>
               </h2>
@@ -367,7 +359,7 @@ export default function Home() {
         </p>
         <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-6">
           Think you know{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-amber-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-amber-500">
             backend?
           </span>
         </h2>

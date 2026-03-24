@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 
-// 🔧 UPDATE: Add your real social URLs
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/yourusername" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourusername" },
-  { label: "Email", href: "mailto:dakarai@example.com" },
+  { label: "GitHub", href: "https://github.com/DakaraiMahisa" },
+  { label: "LeetCode", href: "https://leetcode.com/DakaraiMahisa" },
+  { label: "Contact", href: "/contact", internal: true },
 ];
 
 const FOOTER_LINKS = [
@@ -49,17 +48,27 @@ export default function Footer() {
 
           {/* Social links */}
           <div className="flex gap-4">
-            {SOCIALS.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith("mailto") ? undefined : "_blank"}
-                rel="noopener noreferrer"
-                className="text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
-              >
-                {label}
-              </a>
-            ))}
+            {SOCIALS.map(({ label, href, internal }) =>
+              internal ? (
+                <Link
+                  key={label}
+                  to={href}
+                  className="text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
+                >
+                  {label}
+                </a>
+              ),
+            )}
           </div>
         </div>
 

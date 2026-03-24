@@ -2,6 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Quiz from "./pages/Quiz";
+import Skills from "./pages/Skills";
+import Blog from "./pages/Blog";
 
 // Placeholder for pages we'll build next
 // 🔧 As we build each page, replace these placeholders one by one
@@ -36,11 +41,11 @@ export default function App() {
         <div className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<ComingSoon page="Projects" />} />
-            <Route path="/skills" element={<ComingSoon page="Skills" />} />
-            <Route path="/blog" element={<ComingSoon page="Blog" />} />
-            <Route path="/contact" element={<ComingSoon page="Contact" />} />
-            <Route path="/quiz" element={<ComingSoon page="Quiz" />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/quiz" element={<Quiz />} />
             {/* 404 */}
             <Route path="*" element={<ComingSoon page="404 — Not Found" />} />
           </Routes>

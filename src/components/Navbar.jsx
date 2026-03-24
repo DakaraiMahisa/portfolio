@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
+import logo from "../assets/logo.png";
 
-// Nav links config — add new pages here in future, nowhere else
 const NAV_LINKS = [
   { label: "Home", to: "/" },
   { label: "Projects", to: "/projects" },
@@ -16,14 +16,12 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Shrink navbar on scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 768) setMenuOpen(false);
@@ -32,7 +30,6 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -50,13 +47,13 @@ export default function Navbar() {
       <nav className={`${navBase} ${scrolled ? navScrolled : navTop}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link
-            to="/"
-            className="text-xl font-black tracking-tighter text-slate-900 dark:text-white"
-          >
-            DM<span className="text-indigo-500">.</span>
-          </Link>
 
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="Logo" className="h-8 w-8" />
+            <span className="text-xl font-black tracking-tighter text-slate-900 dark:text-white">
+              DM<span className="text-indigo-500">.</span>
+            </span>
+          </Link>
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map(({ label, to }) => (
@@ -116,16 +113,16 @@ export default function Navbar() {
             <button
               onClick={() => setMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
-              className="md:hidden flex flex-col gap-[5px] p-2"
+              className="md:hidden flex flex-col gap-1.25 p-2"
             >
               <span
-                className={`block w-5 h-0.5 bg-slate-700 dark:bg-slate-300 rounded transition-all duration-300 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+                className={`block w-5 h-0.5 bg-slate-700 dark:bg-slate-300 rounded transition-all duration-300 ${menuOpen ? "translate-y-1.75 rotate-45" : ""}`}
               />
               <span
                 className={`block w-5 h-0.5 bg-slate-700 dark:bg-slate-300 rounded transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
               />
               <span
-                className={`block w-5 h-0.5 bg-slate-700 dark:bg-slate-300 rounded transition-all duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+                className={`block w-5 h-0.5 bg-slate-700 dark:bg-slate-300 rounded transition-all duration-300 ${menuOpen ? "-translate-y-1.75 -rotate-45" : ""}`}
               />
             </button>
           </div>
