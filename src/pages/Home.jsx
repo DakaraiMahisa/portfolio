@@ -43,14 +43,13 @@ const TECH_TAGS = [
 export default function Home() {
   return (
     <main className="pt-20 bg-white dark:bg-slate-950 text-slate-900 dark:text-white overflow-x-hidden">
-      {/* ── HERO ──────────────────────────────────────── */}
+      {/* ── HERO ─────────── */}
       <section className="relative min-h-[92vh] flex items-center px-6 max-w-7xl mx-auto">
         {/* Background glow orbs */}
         <div className="absolute -top-20 -right-20 w-125 h-125 bg-indigo-500/15 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 -left-20 w-87.5 h-87.5 bg-amber-500/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full relative z-10">
-          {/* LEFT — Text content */}
           <div>
             {/* Available badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-8">
@@ -61,7 +60,7 @@ export default function Home() {
             </div>
 
             {/* Name & headline */}
-            {/* 🔧 UPDATE: This is your name — change if needed */}
+
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter mb-6">
               Dakarai
               <br />
@@ -77,7 +76,7 @@ export default function Home() {
             </p>
 
             {/* Bio */}
-            {/* 🔧 UPDATE: Tweak this bio to sound like you */}
+            {/* 🔧 Bio*/}
             <p className="text-base text-slate-500 dark:text-slate-400 max-w-lg leading-relaxed mb-8">
               Pursuing Electronics & Communication Engineering at{" "}
               <span className="text-slate-700 dark:text-slate-300 font-medium">
@@ -132,11 +131,10 @@ export default function Home() {
             {/* Photo frame */}
             <div className="relative z-10 w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl shadow-indigo-500/20 ring-4 ring-indigo-500/30">
               <img
-                src="/dakarai.jpg"
+                src={`${import.meta.env.BASE_URL}dakarai.jpg`}
                 alt="Dakarai Mahisa"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  // Fallback avatar if photo not found
                   e.currentTarget.src =
                     "https://ui-avatars.com/api/?name=Dakarai+Mahisa&background=6366f1&color=fff&size=288&font-size=0.35&bold=true";
                 }}
