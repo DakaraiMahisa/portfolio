@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import dakaraiImg from "../assets/dakarai.jpg";
 
 const FEATURED_PROJECTS = [
   {
@@ -131,7 +132,7 @@ export default function Home() {
             {/* Photo frame */}
             <div className="relative z-10 w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl shadow-indigo-500/20 ring-4 ring-indigo-500/30">
               <img
-                src={`${import.meta.env.BASE_URL}dakarai.jpg`}
+                src={dakaraiImg}
                 alt="Dakarai Mahisa"
                 className="w-full h-full object-cover"
                 onError={(e) => {
