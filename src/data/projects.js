@@ -58,7 +58,7 @@ export const PROJECTS = [
     category: "backend",
     status: "completed",
 
-    githubUrl: "https://github.com/yourusername/task-reminder",
+    githubUrl: "https://github.com/DakaraiMahisa/task-reminder",
     liveUrl: null,
     videoUrl: null,
 
