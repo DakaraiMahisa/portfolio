@@ -1,11 +1,11 @@
 import { Mail, Phone, Globe, Download, Code2, Trophy } from "lucide-react";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import ResumeDocument from "../../pdf/ResumeDocument";
 import { SiGithub } from "react-icons/si";
 import { RESUME } from "../../data/resume";
 
 export default function ResumeHeader() {
   const { personal } = RESUME;
-
-  const handlePrint = () => window.print();
 
   const contacts = [
     {
@@ -29,7 +29,7 @@ export default function ResumeHeader() {
     {
       icon: Globe,
       label: "Portfolio",
-      value: "dakarai.dev",
+      value: "dakaraimahisa.github.io",
       href: personal.portfolio,
     },
     {
@@ -85,13 +85,13 @@ export default function ResumeHeader() {
 
         {/* Download */}
 
-        <button
-          onClick={handlePrint}
+        <PDFDownloadLink
+          document={<ResumeDocument />}
+          fileName="Dakarai_Mahisa_Resume.pdf"
           className="print:hidden ml-6 rounded-md bg-indigo-600 px-3 py-2 text-xs font-medium text-white hover:bg-indigo-700"
         >
-          <Download size={14} className="inline mr-1" />
-          PDF
-        </button>
+          {({ loading }) => (loading ? "Generating..." : "Download PDF")}
+        </PDFDownloadLink>
       </div>
     </header>
   );

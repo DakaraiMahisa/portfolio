@@ -1,7 +1,7 @@
 import { Download, FileText } from "lucide-react";
 
 export default function ResumeSection() {
-  const resumeUrl = `${import.meta.env.BASE_URL}/resume/dakaraiR.pdf`;
+  const resumeUrl = `${import.meta.env.BASE_URL}/resume/dakarai_Resume.pdf`;
 
   return (
     <section className="px-6 py-24 bg-slate-50 dark:bg-slate-900/40 border-y border-slate-100 dark:border-slate-800">

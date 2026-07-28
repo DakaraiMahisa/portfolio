@@ -1,3 +1,6 @@
+import dashboard from "../assets/projects/stockpilot/dashboard.png";
+import app from "../assets/projects/taskreminderapp/app.png";
+
 export const PROJECTS = [
   {
     id: 1,
@@ -40,7 +43,7 @@ export const PROJECTS = [
 
     videoUrl: null,
 
-    imageUrl: "/projects/stockpilot.png",
+    imageUrl: dashboard,
 
     year: "2026",
   },
@@ -69,7 +72,7 @@ export const PROJECTS = [
     liveUrl: null,
     videoUrl: null,
 
-    imageUrl: "/projects/task-reminder.png",
+    imageUrl: app,
     year: "2024",
   },
 ];

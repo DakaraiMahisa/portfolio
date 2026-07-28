@@ -7,9 +7,9 @@ export const RESUME = {
     tagline:
       "Building scalable enterprise software and AI-powered solutions that solve real-world business challenges.",
 
-    email: "example@gmail.com",
+    email: "dakaraimahisa02@gmail.com",
 
-    phone: "+91 xxx xxx xxxx",
+    phone: "+91 8220764602",
 
     location: "Coimbatore, Tamil Nadu, India",
 

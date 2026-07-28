@@ -91,7 +91,7 @@ function ProjectImage({ imageUrl, title, className = "" }) {
     <img
       src={imageUrl}
       alt={`${title} screenshot`}
-      className={`object-cover ${className}`}
+      className={`w-full h-full object-contain object-between ${className}`}
       onError={() => setErrored(true)}
     />
   );
