@@ -7,16 +7,18 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Quiz from "./pages/Quiz";
 import NotFound from "./pages/NotFound";
+import ResumePage from "./pages/ResumePage";
 
 export default function App() {
   return (
     <BrowserRouter basename="/portfolio">
       <Routes>
+        <Route path="/resume" element={<ResumePage />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
-          {/* <Route path="/blog" element={<Blog />} /> */}
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="*" element={<NotFound />} />

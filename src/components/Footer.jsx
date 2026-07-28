@@ -9,7 +9,6 @@ const SOCIALS = [
 const FOOTER_LINKS = [
   { label: "Projects", to: "/projects" },
   { label: "Skills", to: "/skills" },
-  { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
   { label: "⚡ Quiz", to: "/quiz" },
 ];

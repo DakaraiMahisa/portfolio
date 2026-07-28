@@ -3,39 +3,46 @@ export const PROJECTS = [
     id: 1,
     featured: true,
     num: "01",
-    title: "DevOps Pilot",
-    tagline: "AI-powered CI/CD failure analysis",
+
+    title: "StockPilot – SME Business Management Platform",
+
+    tagline: "Enterprise software built for modern business operations",
+
     description:
-      "An AI-powered backend service that automatically analyzes and explains CI/CD pipeline failures. " +
-      "Instead of spending hours reading cryptic build logs, DevOps Pilot diagnoses the root cause, " +
-      "suggests fixes, and delivers human-readable explanations — cutting pipeline debug time dramatically.",
+      "StockPilot is a cloud-ready enterprise platform designed to help small and medium-sized businesses manage their operations from a single secure system. The platform integrates inventory, sales, organization management, user administration, taxation, and business configuration within a scalable multi-tenant architecture, while laying the foundation for future AI-powered business intelligence.",
 
     highlights: [
-      "AI-driven root cause analysis of pipeline failures",
-      "Human-readable explanations replacing raw log output",
-      "REST API consumed by a React frontend dashboard",
-      "Containerised with Docker for consistent environments",
+      "Secure multi-tenant architecture supporting multiple organizations",
+      "JWT authentication with refresh token rotation and role-based access control",
+      "Inventory, product catalog, category and stock management",
+      "Organization, branch, taxation and business configuration management",
+      "Modern React frontend powered by Spring Boot REST APIs",
+      "Designed for future AI-driven analytics, forecasting and intelligent business insights",
     ],
     tags: [
       "Java",
-      "Python",
       "Spring Boot",
-      "Docker",
       "React",
-      "AI/ML",
-      "CI/CD",
+      "PostgreSQL",
+      "Docker",
+      "JWT",
+      "RBAC",
+      "Multi-Tenant",
     ],
-    category: "devops",
-    status: "in-progress",
 
-    githubUrl: "https://github.com/DakaraiMahisa/devops-pilot",
+    category: "fullstack",
+
+    status: "active",
+
+    githubUrl: "https://github.com/DakaraiMahisa/stockpilotbackend",
 
     liveUrl: null,
 
     videoUrl: null,
 
-    imageUrl: "/projects/devops-pilot.png",
-    year: "2025",
+    imageUrl: "/projects/stockpilot.png",
+
+    year: "2026",
   },
 
   {
@@ -58,7 +65,7 @@ export const PROJECTS = [
     category: "backend",
     status: "completed",
 
-    githubUrl: "https://github.com/DakaraiMahisa/task-reminder",
+    githubUrl: "https://github.com/DakaraiMahisa/task-reminder-app",
     liveUrl: null,
     videoUrl: null,
 
@@ -88,6 +95,11 @@ export const STATUS_CONFIG = {
     classes:
       "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
   },
+  active: {
+    label: "Actively Developed",
+    classes:
+      "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
+  },
   planned: {
     label: "Planned",
     classes:
@@ -97,8 +109,7 @@ export const STATUS_CONFIG = {
 
 export const CATEGORY_CONFIG = {
   all: { label: "All Projects" },
-  backend: { label: "Backend" },
-  devops: { label: "DevOps" },
-  fullstack: { label: "Full Stack" },
-  tools: { label: "Tools" },
+  fullstack: { label: "Enterprise Applications" },
+  backend: { label: "Backend Systems" },
+  tools: { label: "Developer Tools" },
 };
