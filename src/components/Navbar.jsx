@@ -6,8 +6,7 @@ import logo from "../assets/logo.png";
 const NAV_LINKS = [
   { label: "Home", to: "/" },
   { label: "Projects", to: "/projects" },
-  { label: "Skills", to: "/skills" },
-  // { label: "Blog", to: "/blog" },
+  { label: "Resume", to: "/resume" },
   { label: "Contact", to: "/contact" },
 ];
 

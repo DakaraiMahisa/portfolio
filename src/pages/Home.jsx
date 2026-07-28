@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import dakaraiImg from "../assets/dakarai.jpg";
+import ResumeSection from "../components/ResumeSection";
+import CertificationSection from "../components/CertificationSection";
+import VideoSection from "../components/VideoSection";
 
 const FEATURED_PROJECTS = [
   {
@@ -9,31 +12,38 @@ const FEATURED_PROJECTS = [
     description:
       "A Spring Boot application that schedules and delivers smart task reminders via email and push notifications. Built with PostgreSQL and Redis for persistence and caching.",
     tags: ["Spring Boot", "PostgreSQL", "Redis", "Docker"],
-    github: "https://github.com/DakaraiMahisa/task-reminder",
+    github: "https://github.com/DakaraiMahisa/task-reminder-app",
     color: "indigo",
   },
   {
     id: 2,
     num: "02",
-    title: "DevOps Pilot",
+    title: "StockPilot – SME Business Management Platform",
     description:
-      "A CI/CD pipeline automation toolkit that provisions infrastructure, runs tests, and deploys Spring Boot microservices to AWS using GitHub Actions and Docker.",
-    tags: ["Docker", "GitHub Actions", "AWS", "Spring Boot"],
-    github: "https://github.com/DakaraiMahisa/devops-pilot",
-    color: "amber",
+      "A multi-tenant enterprise platform built to help small and medium-sized businesses manage inventory, sales, users, taxation, branches, and business operations. Designed with Spring Boot, React, PostgreSQL, JWT authentication, RBAC, Docker, and modern cloud-ready architecture.",
+    tags: [
+      "Spring Boot",
+      "React",
+      "PostgreSQL",
+      "Docker",
+      "JWT",
+      "Multi-Tenant",
+    ],
+    github: "https://github.com/DakaraiMahisa/stockpilotbackend",
   },
 ];
 
 const STATS = [
-  { value: "2+", label: "Years Learning" },
-  { value: "2+", label: "Projects Built" },
-  { value: "3+", label: "Technologies" },
-  { value: "100%", label: "Committed" },
+  { value: "Java", label: "Primary Language" },
+  { value: "Spring Boot", label: "Backend" },
+  { value: "React", label: "Frontend" },
+  { value: "AI", label: "Future Focus" },
 ];
 
 const TECH_TAGS = [
   "Java",
   "Spring Boot",
+  "React",
   "PostgreSQL",
   "MySQL",
   "MongoDB",
@@ -72,8 +82,8 @@ export default function Home() {
 
             {/* Role */}
             <p className="text-lg md:text-xl font-semibold text-slate-600 dark:text-slate-300 mb-4">
-              Backend Developer &nbsp;·&nbsp; ECE Student &nbsp;·&nbsp; Future
-              Full-Stack Engineer
+              Software Engineer &nbsp;·&nbsp; Enterprise Systems &nbsp;·&nbsp;
+              AI Solutions
             </p>
 
             {/* Bio */}
@@ -83,9 +93,10 @@ export default function Home() {
               <span className="text-slate-700 dark:text-slate-300 font-medium">
                 KPR Institute of Engineering and Technology
               </span>
-              , while building a serious foundation in Java, Spring Boot and
-              cloud-native backend systems. Driven by one goal — becoming a
-              world-class full-stack engineer.
+              , while engineering scalable enterprise software using Java,
+              Spring Boot, React, and cloud-native technologies. Passionate
+              about building intelligent business solutions that help
+              organizations digitize operations through modern software and AI.
             </p>
 
             {/* Tech tags */}
@@ -148,7 +159,7 @@ export default function Home() {
                 Current Focus
               </p>
               <p className="font-bold text-indigo-500 text-sm">
-                Spring Boot + DevOps
+                Enterprise Software & AI
               </p>
             </div>
 
@@ -205,18 +216,23 @@ export default function Home() {
                 Developer by passion.
               </span>
             </h2>
-            {/* 🔧 About me*/}
+            {/* 🔧 About me */}
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
-              I'm an ECE student who discovered a deep passion for software
-              engineering — specifically the backend systems that make
-              applications fast, reliable and secure. While my degree covers
-              circuits and signals, my evenings are spent writing Java,
-              designing APIs and learning how real-world systems are built.
+              I'm an Electronics and Communication Engineering student with a
+              strong focus on software engineering and enterprise systems. I
+              design and build scalable applications using Java, Spring Boot,
+              React, and modern cloud-native technologies, with an emphasis on
+              clean architecture, security, and maintainability.
             </p>
+
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
-              My north star is becoming a full-stack developer, but I'm building
-              the right foundation first — solid backend skills, clean code
-              habits, and an understanding of DevOps that most developers skip.
+              What drives me is building technology that creates meaningful
+              impact. I enjoy designing intelligent enterprise software that
+              simplifies complex business processes, improves operational
+              efficiency, and helps organizations embrace the opportunities of
+              an AI-driven future. Through every project, my goal is to develop
+              solutions that are not only technically robust but also genuinely
+              valuable to the people and businesses that rely on them.
             </p>
             <Link
               to="/skills"
@@ -350,7 +366,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <CertificationSection />
+      <ResumeSection />
+      <VideoSection />
       {/* ── QUIZ CTA ──────────────────────────────────── */}
       <section className="px-6 py-24 max-w-3xl mx-auto text-center">
         <p className="text-xs uppercase tracking-[0.2em] font-bold text-amber-500 mb-4">
