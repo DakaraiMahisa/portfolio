@@ -1,4 +1,4 @@
-import dashboard from "../assets/projects/stockpilot/dashboard.png";
+import dashboard from "../assets/projects/stockpilot/dashboard.jpg";
 import app from "../assets/projects/taskreminderapp/app.png";
 
 export const PROJECTS = [
