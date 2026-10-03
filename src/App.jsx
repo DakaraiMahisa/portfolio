@@ -11,7 +11,7 @@ import ResumePage from "./pages/ResumePage";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter>
       <Routes>
         <Route path="/resume" element={<ResumePage />} />
         <Route element={<Layout />}>
