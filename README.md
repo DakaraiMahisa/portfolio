@@ -6,7 +6,7 @@
 
 A responsive portfolio website showcasing my projects, technical skills, professional experience, and an interactive resume with downloadable PDF support.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-4F46E5?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dakaraimahisa.github.io/portfolio)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-4F46E5?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dmahisa.me)
 [![GitHub](https://img.shields.io/badge/GitHub-DakaraiMahisa-181717?style=for-the-badge&logo=github)](https://github.com/DakaraiMahisa)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)]
 [![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)]
@@ -207,7 +207,6 @@ Features include:
 - Analytics dashboard
 - Contact form backend
 - Visitor analytics
-- Custom domain
 
 ---
 
@@ -223,7 +222,7 @@ Feel free to fork the repository and submit a pull request.
 
 Portfolio
 
-> https://dakaraimahisa.github.io/portfolio
+> https://dmahisa.me
 
 GitHub
 
