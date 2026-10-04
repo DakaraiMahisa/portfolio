@@ -13,7 +13,7 @@ export const RESUME = {
 
     location: "Coimbatore, Tamil Nadu, India",
 
-    portfolio: "https://dakaraimahisa.github.io/portfolio",
+    portfolio: "https://dmahisa.me",
 
     github: "https://github.com/DakaraiMahisa",
 
@@ -73,7 +73,7 @@ export const RESUME = {
     },
   ],
   skills: {
-    languages: ["Java", "Python", "JavaScript", "SQL"],
+    languages: ["Java", "JavaScript", "SQL"],
 
     backend: [
       "Spring Boot",
