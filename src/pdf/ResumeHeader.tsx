@@ -22,7 +22,7 @@ export default function ResumeHeader() {
     },
     {
       label: "Portfolio",
-      value: "dakaraimahisa.github.io",
+      value: "dmahisa.me",
       href: personal.portfolio,
     },
     {

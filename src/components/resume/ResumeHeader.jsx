@@ -29,7 +29,7 @@ export default function ResumeHeader() {
     {
       icon: Globe,
       label: "Portfolio",
-      value: "dakaraimahisa.github.io",
+      value: "dmahisa.me",
       href: personal.portfolio,
     },
     {
